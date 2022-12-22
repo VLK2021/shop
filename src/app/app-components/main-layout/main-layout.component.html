@@ -1,1 +1,23 @@
+<nav class="app-main-layout">
+  <h2>Shop</h2>
+
+  <ul>
+    <li routerLinkActive="active">
+      <a href="#">Phone</a>
+    </li>
+
+    <li routerLinkActive="active">
+      <a href="#">Tablet</a>
+    </li>
+
+    <li routerLinkActive="active">
+      <a href="#">Leptop</a>
+    </li>
+
+    <li routerLinkActive="active">
+      <a [routerLink]="['/cart']">Cart</a>
+    </li>
+  </ul>
+</nav>
+
 <router-outlet></router-outlet>
