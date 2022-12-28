@@ -1,1 +1,32 @@
-<p>login-page works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+  <h2>Login as Administrator</h2>
+
+  <div class="inpEmail">
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email">
+
+
+<!--    потрібно розбиратись-->
+    <div *ngIf="form.controls['email'].touched  && form.controls['email'].invalid" class="inpEmail-validation">
+<!--      <small *ngIf="form.get('email').errors['required']">Enter email</small>-->
+      <small *ngIf="form.controls['email'].value">Enter email</small>
+<!--      <p *ngIf="form.get('email').errors.email">Enter valid email</p>-->
+      <small *ngIf="form.controls['email'].errors">Enter valid email</small>
+    </div>
+
+
+
+  </div>
+
+  <div class="inpPassword">
+    <label for="password">password:</label>
+    <input id="password" type="number" formControlName="password">
+
+    <div  *ngIf="form.controls['password'].touched  && form.controls['password'].invalid" class="inpPas-validation">
+      btdtdtud
+    </div>
+  </div>
+
+  <button type="submit" class="btn-form" [disabled]="form.invalid">logon</button>
+</form>

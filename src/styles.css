@@ -32,3 +32,10 @@ img{
   display: flex;
   justify-content: center;
 }
+
+.container{
+  max-width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
