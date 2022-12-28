@@ -1,0 +1,21 @@
+.app-admin-layout {
+  background: var(--bd-header);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+h1{
+  color: var(--color-header);
+  font-weight: bold;
+}
+
+ul{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
