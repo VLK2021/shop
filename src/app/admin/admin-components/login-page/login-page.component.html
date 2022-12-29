@@ -21,7 +21,12 @@
 <!--  <button type="submit" class="btn-form" [disabled]="form.invalid">logon</button>-->
 <!--</form>-->
 
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="submit()">
   <h2>Login as Administrator</h2>
+
+  <div class="inpEmail">
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email">
+  </div>
 
 </form>
