@@ -20,8 +20,8 @@ export class LoginPageComponent implements OnInit {
 
   createForm(): void {
     this.form = new FormGroup<any>({
-      email: new FormControl(null, Validators.required),
-      password: new FormControl(null, Validators.required),
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      password: new FormControl(null, [Validators.required, Validators.minLength(8)]),
     })
   }
 
