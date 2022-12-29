@@ -12,13 +12,6 @@
 <!--&lt;!&ndash;    &lt;!&ndash;      <small *ngIf="form.controls['email'].errors">Enter valid email</small>&ndash;&gt;&ndash;&gt;-->
 <!--&lt;!&ndash;    &lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;-->
 <!--&lt;!&ndash;  </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;  <div class="inpPassword">&ndash;&gt;-->
-<!--&lt;!&ndash;    <label for="password">password:</label>&ndash;&gt;-->
-<!--&lt;!&ndash;    <input id="password" type="number" formControlName="password">&ndash;&gt;-->
-<!--&lt;!&ndash;  </div>&ndash;&gt;-->
-
-<!--  <button type="submit" class="btn-form" [disabled]="form.invalid">logon</button>-->
 <!--</form>-->
 
 <form [formGroup]="form" (ngSubmit)="submit()">
@@ -27,6 +20,21 @@
   <div class="inpEmail">
     <label for="email">Email:</label>
     <input id="email" type="email" formControlName="email">
+
+    <div *ngIf="form.controls['email'].touched  && form.controls['email'].invalid" class="inpEmail-validation">
+      <small *ngIf="!form.controls['email'].value">Enter email</small>
+    </div>
   </div>
 
+  <div class="inpPass">
+    <label for="password">Password:</label>
+    <input id="password" type="email" formControlName="password">
+
+    <div *ngIf="form.controls['password'].touched  && form.controls['password'].invalid" class="inpPass-validation">
+      <small *ngIf="!form.controls['password'].value">Enter password</small>
+    </div>
+  </div>
+
+
+  <button type="submit" [disabled]="form.invalid" class="btn-form">login</button>
 </form>
