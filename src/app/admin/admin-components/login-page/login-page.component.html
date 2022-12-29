@@ -1,32 +1,22 @@
-<form [formGroup]="form" (ngSubmit)="submit()">
+<!--<form [formGroup]="form" (ngSubmit)="submit()">-->
+<!--  <h2>Login as Administrator</h2>-->
 
-  <h2>Login as Administrator</h2>
+<!--&lt;!&ndash;  <div class="inpEmail">&ndash;&gt;-->
+<!--&lt;!&ndash;    <label for="email">Email:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;    <input id="email" type="email" formControlName="email">&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash;    потрібно розбиратись&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash;    <div *ngIf="form.controls['email'].touched  && form.controls['email'].invalid" class="inpEmail-validation">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash;&lt;!&ndash;      <small *ngIf="form.get('email').errors['required']">Enter email</small>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash;      <small *ngIf="form.controls['email'].value">Enter email</small>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash;&lt;!&ndash;      <p *ngIf="form.get('email').errors.email">Enter valid email</p>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash;      <small *ngIf="form.controls['email'].errors">Enter valid email</small>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
 
-  <div class="inpEmail">
-    <label for="email">Email:</label>
-    <input id="email" type="email" formControlName="email">
+<!--&lt;!&ndash;  <div class="inpPassword">&ndash;&gt;-->
+<!--&lt;!&ndash;    <label for="password">password:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;    <input id="password" type="number" formControlName="password">&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
 
-
-<!--    потрібно розбиратись-->
-    <div *ngIf="form.controls['email'].touched  && form.controls['email'].invalid" class="inpEmail-validation">
-<!--      <small *ngIf="form.get('email').errors['required']">Enter email</small>-->
-      <small *ngIf="form.controls['email'].value">Enter email</small>
-<!--      <p *ngIf="form.get('email').errors.email">Enter valid email</p>-->
-      <small *ngIf="form.controls['email'].errors">Enter valid email</small>
-    </div>
-
-
-
-  </div>
-
-  <div class="inpPassword">
-    <label for="password">password:</label>
-    <input id="password" type="number" formControlName="password">
-
-    <div  *ngIf="form.controls['password'].touched  && form.controls['password'].invalid" class="inpPas-validation">
-      btdtdtud
-    </div>
-  </div>
-
-  <button type="submit" class="btn-form" [disabled]="form.invalid">logon</button>
-</form>
+<!--  <button type="submit" class="btn-form" [disabled]="form.invalid">logon</button>-->
+<!--</form>-->
