@@ -26,6 +26,8 @@ export class AuthService {
       const expData = new Date(new Date().getTime() + +res.expiresIn * 1000);
       localStorage.setItem('fb-token-exp', expData.toString());
       localStorage.setItem('fb-token', res.idToken);
+    }else {
+      localStorage.clear();
     }
   };
 
@@ -33,10 +35,10 @@ export class AuthService {
     // @ts-ignore
     const expData = new Date(localStorage.getItem('fb-token-exp'))
     if (new Date > expData) {
-      this.logout()
+      this.logout();
       return null
     }
-    return localStorage.getItem('fb-token')
+    return localStorage.getItem('fb-token');
   };
 
   logout(){
@@ -45,6 +47,6 @@ export class AuthService {
 
   isAuthenticated(){
     return !!this.token
-  }
+  };
 
 }
