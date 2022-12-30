@@ -26,6 +26,6 @@
 
 
   <div class="text-center">
-    <button type="submit" [disabled]="form.invalid" class="btn-form">login</button>
+    <button type="submit" [disabled]="form.invalid || submitted" class="btn-form">login</button>
   </div>
 </form>

@@ -7,6 +7,7 @@ import {MainLayoutComponent} from "./app-components/main-layout/main-layout.comp
 import {MainPageComponent} from "./app-components/main-page/main-page.component";
 import {ProductPageComponent} from "./app-components/product-page/product-page.component";
 import {CartPageComponent} from "./app-components/cart-page/cart-page.component";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import {CartPageComponent} from "./app-components/cart-page/cart-page.component"
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
