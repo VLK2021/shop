@@ -28,7 +28,7 @@ export class LoginPageComponent implements OnInit {
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [Validators.required, Validators.minLength(8)]),
     })
-  }
+  };
 
   submit() {
     if (this.form.invalid) {
@@ -52,5 +52,5 @@ export class LoginPageComponent implements OnInit {
       this.submitted = false;
     })
 
-  }
+  };
 }
