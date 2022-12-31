@@ -10,6 +10,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 export class AddPageComponent implements OnInit {
   form: FormGroup;
+  submitted = false;
 
   constructor() {
     this.createForm();
@@ -29,6 +30,10 @@ export class AddPageComponent implements OnInit {
   };
 
   submit() {
+    if (this.form.invalid) {
+      return;
+    }
 
+    this.submitted = true;
   };
 }

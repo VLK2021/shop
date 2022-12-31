@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from "@angular/common/http";
+import {QuillModule} from "ngx-quill";
 
 import { AppComponent } from './app.component';
 import {AppRoutingModule} from "./app.routing.module";
@@ -7,7 +9,6 @@ import {MainLayoutComponent} from "./app-components/main-layout/main-layout.comp
 import {MainPageComponent} from "./app-components/main-page/main-page.component";
 import {ProductPageComponent} from "./app-components/product-page/product-page.component";
 import {CartPageComponent} from "./app-components/cart-page/cart-page.component";
-import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    QuillModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
