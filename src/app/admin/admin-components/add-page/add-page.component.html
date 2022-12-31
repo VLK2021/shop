@@ -1,1 +1,43 @@
-<p>add-page works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <h2>Add products</h2>
+
+  <div>
+    <label for="type">Type</label>
+    <input id="type" type="type" formControlName="type">
+    <div *ngIf="form.controls['type'].touched  && form.controls['type'].invalid" class="inpPass-validation">
+      <small *ngIf="!form.controls['type'].value">Chose product type</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="tittle">Name</label>
+    <input id="tittle" type="tittle" formControlName="tittle">
+    <div *ngIf="form.controls['tittle'].touched  && form.controls['tittle'].invalid" class="inpPass-validation">
+      <small *ngIf="!form.controls['tittle'].value">Enter name product</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="photo">Photo:</label>
+  </div>
+
+  <div>
+    <label for="info">Information:</label>
+  </div>
+
+  <div>
+    <label for="price">Price</label>
+    <input id="price" type="price" formControlName="price">
+    <div *ngIf="form.controls['price'].touched  && form.controls['price'].invalid" class="inpPass-validation">
+      <small *ngIf="!form.controls['price'].value">Enter product price</small>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="text-center">
+    <button type="submit" [disabled]="form.invalid" class="btn-form">login</button>
+  </div>
+</form>
