@@ -34,6 +34,16 @@ export class AddPageComponent implements OnInit {
       return;
     }
 
+    const product = {
+      type: this.form.value.type,
+      tittle: this.form.value.tittle,
+      photo: this.form.value.photo,
+      info: this.form.value.info,
+      price: this.form.value.price,
+    }
+
     this.submitted = true;
+
+    console.log(this.form);
   };
 }

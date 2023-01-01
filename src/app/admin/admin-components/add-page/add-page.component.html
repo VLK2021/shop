@@ -1,34 +1,57 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
-  <h2>Add products:</h2>
+  <h2>Add product:</h2>
 
   <div class="control-block">
-    <div><label for="type">Type:</label></div>
-    <input id="type" type="type" formControlName="type">
+    <div>
+      <label for="type">Type:</label>
+    </div>
+<!--    <input id="type" type="type" formControlName="type">-->
+
+    <select formControlName="type">
+      <option value="Phone">Phone</option>
+      <option value="Tablet">Tablet</option>
+      <option value="Laptop">Laptop</option>
+    </select>
+
     <div *ngIf="form.controls['type'].touched  && form.controls['type'].invalid" class="inpPass-validation">
       <small *ngIf="!form.controls['type'].value">Chose product type</small>
     </div>
   </div>
 
   <div  class="control-block">
-    <div><label for="tittle">Name:</label></div>
+    <div>
+      <label for="tittle">Name:</label>
+    </div>
     <input id="tittle" type="tittle" formControlName="tittle">
     <div *ngIf="form.controls['tittle'].touched  && form.controls['tittle'].invalid" class="inpPass-validation">
-      <small *ngIf="!form.controls['tittle'].value">Enter name product</small>
+      <small *ngIf="!form.controls['tittle'].value">Enter product name</small>
     </div>
   </div>
 
   <div  class="control-block">
-    <label for="type">Photo:</label>
-    <quill-editor formControlName="photo"></quill-editor>
+    <div>
+      <label for="type">Photo:</label>
+    </div>
+    <quill-editor formControlName="photo" class="quill-block"></quill-editor>
+    <div *ngIf="form.controls['photo'].touched  && form.controls['photo'].invalid" class="inpPass-validation">
+      <small *ngIf="!form.controls['photo'].value">Add photo of product</small>
+    </div>
   </div>
 
   <div  class="control-block">
-    <label for="type">Information:</label>
-    <quill-editor formControlName="info"></quill-editor>
+    <div>
+      <label for="type">Information:</label>
+    </div>
+    <quill-editor formControlName="info" class="quill-block"></quill-editor>
+    <div *ngIf="form.controls['info'].touched  && form.controls['info'].invalid" class="inpPass-validation">
+      <small *ngIf="!form.controls['info'].value">Enter information of product</small>
+    </div>
   </div>
 
   <div  class="control-block">
-    <div><label for="price">Price:</label></div>
+    <div>
+      <label for="price">Price:</label>
+    </div>
     <input id="price" type="price" formControlName="price">
     <div *ngIf="form.controls['price'].touched  && form.controls['price'].invalid" class="inpPass-validation">
       <small *ngIf="!form.controls['price'].value">Enter product price</small>
