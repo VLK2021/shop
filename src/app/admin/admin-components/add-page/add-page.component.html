@@ -5,9 +5,7 @@
     <div>
       <label for="type">Type:</label>
     </div>
-<!--    <input id="type" type="type" formControlName="type">-->
-
-    <select formControlName="type">
+    <select id="type" formControlName="type">
       <option value="Phone">Phone</option>
       <option value="Tablet">Tablet</option>
       <option value="Laptop">Laptop</option>
@@ -18,7 +16,7 @@
     </div>
   </div>
 
-  <div  class="control-block">
+  <div class="control-block">
     <div>
       <label for="tittle">Name:</label>
     </div>
@@ -28,7 +26,7 @@
     </div>
   </div>
 
-  <div  class="control-block">
+  <div class="control-block">
     <div>
       <label for="type">Photo:</label>
     </div>
@@ -38,7 +36,7 @@
     </div>
   </div>
 
-  <div  class="control-block">
+  <div class="control-block">
     <div>
       <label for="type">Information:</label>
     </div>
@@ -48,7 +46,7 @@
     </div>
   </div>
 
-  <div  class="control-block">
+  <div class="control-block">
     <div>
       <label for="price">Price:</label>
     </div>
@@ -59,6 +57,6 @@
   </div>
 
   <div class="btn">
-    <button type="submit" [disabled]="form.invalid || submitted" class="btn-form">login</button>
+    <button type="submit" [disabled]="form.invalid || submitted" class="btn-form">Add</button>
   </div>
 </form>
