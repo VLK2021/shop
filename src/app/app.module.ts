@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {QuillModule} from "ngx-quill";
 
 import { AppComponent } from './app.component';
@@ -9,6 +9,7 @@ import {MainLayoutComponent} from "./app-components/main-layout/main-layout.comp
 import {MainPageComponent} from "./app-components/main-page/main-page.component";
 import {ProductPageComponent} from "./app-components/product-page/product-page.component";
 import {CartPageComponent} from "./app-components/cart-page/cart-page.component";
+import {AuthInterceptor} from "./auth.interseptor";
 
 
 @NgModule({
@@ -25,7 +26,13 @@ import {CartPageComponent} from "./app-components/cart-page/cart-page.component"
     HttpClientModule,
     QuillModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      multi: true,
+      useClass: AuthInterceptor
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
