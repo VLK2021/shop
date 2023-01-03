@@ -3,7 +3,10 @@
   padding: 0.5rem;
   text-align: center;
 }
-
+h2{
+  width: 100%;
+  padding: 1rem;
+}
 
 .btn-open, .btn-add-cart {
   width: 100%;
@@ -18,3 +21,11 @@
   border-radius: 0.5rem;
   margin-top: 1rem;
 }
+
+.app-product-img {
+  height: 23rem;
+  padding: 0 0.5rem;
+}
+
+
+
