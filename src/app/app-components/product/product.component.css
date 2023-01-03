@@ -5,3 +5,16 @@
 }
 
 
+.btn-open, .btn-add-cart {
+  width: 100%;
+  background: black;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}

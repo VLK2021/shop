@@ -3,3 +3,8 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.app-main-page-app-product {
+  width: 33.3333%;
+  margin-top: 2rem;
+}
