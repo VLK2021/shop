@@ -1,0 +1,12 @@
+<div class="app-product">
+  <h2>{{product.tittle}}</h2>
+
+  <div class="app-product-img">
+    <quill-view-html [content]="product.photo" class="app-product-img-quill"></quill-view-html>
+  </div>
+
+  <h2>Price: {{product.price}}</h2>
+
+  <button [routerLink]="['/product', product.id]" class="btn-open">Open</button>
+  <button [routerLink]="['/cart']" class="btn-add-cart">Add to cart</button>
+</div>

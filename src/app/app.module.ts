@@ -10,6 +10,7 @@ import {MainPageComponent} from "./app-components/main-page/main-page.component"
 import {ProductPageComponent} from "./app-components/product-page/product-page.component";
 import {CartPageComponent} from "./app-components/cart-page/cart-page.component";
 import {AuthInterceptor} from "./auth.interseptor";
+import {ProductComponent} from "./app-components/product/product.component";
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {AuthInterceptor} from "./auth.interseptor";
     MainPageComponent,
     ProductPageComponent,
     CartPageComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
