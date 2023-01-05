@@ -1,2 +1,14 @@
-<p>product-page works!</p>
+<div *ngIf="product">
+  <div>
+    <div>
+      <button routerLink="/">Back</button>
+    </div>
+
+    <div>
+      <div>
+        <h2>{{product.tittle}}</h2>
+      </div>
+    </div>
+  </div>
+</div>
 
