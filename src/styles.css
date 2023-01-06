@@ -27,7 +27,8 @@ ul {
 }
 
 img{
-  width: 100%;
+  width: 80%;
+  height: 21rem;
 }
 
 .text-center{
@@ -36,7 +37,7 @@ img{
 }
 
 .container{
-  max-width: 80%;
+  max-width: 90%;
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;

@@ -1,1 +1,69 @@
-<p>adit-page works!</p>
+<div *ngIf="form; else loading">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <h2>Update product:</h2>
+
+    <div class="control-block">
+      <div>
+        <label for="type">Type:</label>
+      </div>
+      <select id="type" formControlName="type">
+        <option value="Phone">Phone</option>
+        <option value="Tablet">Tablet</option>
+        <option value="Laptop">Laptop</option>
+      </select>
+
+      <div *ngIf="form.controls['type'].touched  && form.controls['type'].invalid" class="inpPass-validation">
+        <small *ngIf="!form.controls['type'].value">Chose product type</small>
+      </div>
+    </div>
+
+    <div class="control-block">
+      <div>
+        <label for="tittle">Name:</label>
+      </div>
+      <input id="tittle" type="tittle" formControlName="tittle">
+      <div *ngIf="form.controls['tittle'].touched  && form.controls['tittle'].invalid" class="inpPass-validation">
+        <small *ngIf="!form.controls['tittle'].value">Enter product name</small>
+      </div>
+    </div>
+
+    <div class="control-block">
+      <div>
+        <label for="type">Photo:</label>
+      </div>
+      <quill-editor formControlName="photo" class="quill-block"></quill-editor>
+      <div *ngIf="form.controls['photo'].touched  && form.controls['photo'].invalid" class="inpPass-validation">
+        <small *ngIf="!form.controls['photo'].value">Add photo of product</small>
+      </div>
+    </div>
+
+    <div class="control-block">
+      <div>
+        <label for="type">Information:</label>
+      </div>
+      <quill-editor formControlName="info" class="quill-block"></quill-editor>
+      <div *ngIf="form.controls['info'].touched  && form.controls['info'].invalid" class="inpPass-validation">
+        <small *ngIf="!form.controls['info'].value">Enter information of product</small>
+      </div>
+    </div>
+
+    <div class="control-block">
+      <div>
+        <label for="price">Price:</label>
+      </div>
+      <input id="price" type="price" formControlName="price">
+      <div *ngIf="form.controls['price'].touched  && form.controls['price'].invalid" class="inpPass-validation">
+        <small *ngIf="!form.controls['price'].value">Enter product price</small>
+      </div>
+    </div>
+
+    <div class="btn">
+      <button type="submit" [disabled]="form.invalid || submitted" class="btn-form">Update</button>
+    </div>
+  </form>
+</div>
+
+<ng-template #loading>
+  <p class="text-center">Loading...</p>
+</ng-template>
+
