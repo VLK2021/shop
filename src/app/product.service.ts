@@ -49,4 +49,12 @@ export class ProductService {
       }))
   }
 
+  remove(id: any) {
+    return this.http.delete(`${environment.fbDbUrl}/products/${id}.json`)
+  }
+
+  update(product:IProduct) {
+    return this.http.patch(`${environment.fbDbUrl}/products/${product.id}.json`, product)
+  }
+
 }

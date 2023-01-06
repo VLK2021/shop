@@ -1,1 +1,26 @@
-<p>dashboard-page works!</p>
+<div *ngIf="products; else loading" class="maine">
+  <h2 class="text-center">Dashboard of products</h2>
+
+  <div class="app-dashboard-page">
+    <div *ngFor="let product of products; let idx = index">
+      <div class="app-dashboard-page-block">
+        <div class="app-dashboard-page-block-info">
+          <div>{{idx + 1}}.</div>
+          <div class="type">{{product.tittle}}</div>
+          <div class="price">{{product.price}} $</div>
+          <div class="date">{{product.date}}</div>
+        </div>
+
+        <div class="app-dashboard-page-block-btn">
+          <button [routerLink]="['/admin', 'product', 'product.id', 'edit']" class="app-dashboard-page-block-btn-open">Open</button>
+
+          <button class="app-dashboard-page-block-btn-delete" (click)="delete(product.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p class="text-center">Loading...</p>
+</ng-template>

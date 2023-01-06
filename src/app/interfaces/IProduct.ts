@@ -1,6 +1,6 @@
 export interface IProduct {
   type?: string,
-  id?: number,
+  id?: string,
   tittle?: string,
   photo?: string,
   info?: string,
