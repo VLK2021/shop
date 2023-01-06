@@ -1,0 +1,75 @@
+.app-product-page-btn-back, .app-product-page-info-block-price-btn {
+  width: 10rem;
+  padding: 0.5rem;
+  background: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.app-product-page-btn-block-back {
+  text-align: end;
+  margin: 2rem 0;
+  padding: 0 1rem 0 0;
+}
+
+.app-product-page-info-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-product-page-info-block-left {
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0 3rem 0;
+}
+
+.app-product-page-info-block-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.app-product-page-info-block-left > h2{
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.app-product-page-info-block-price {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.app-product-page-info-block-price-btn {
+margin-left: 1rem;
+}
+
+.app-product-page-info-block-price > h2{
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.app-product-page-info-block-right {
+  text-align: start;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0 3rem 0;
+}
+
+.app-product-page-info-block-right-tittle {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: black;
+  text-transform: uppercase;
+}
+
