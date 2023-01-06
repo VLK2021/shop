@@ -6,7 +6,7 @@
 
     <div class="app-product-page-info-block">
       <div class="app-product-page-info-block-left">
-          <h2>{{product.tittle}}</h2>
+        <h2>{{product.tittle}}</h2>
 
         <div class="app-product-page-info-block-img">
           <quill-view-html [content]="product?.photo"></quill-view-html>
@@ -14,14 +14,18 @@
 
         <div class="app-product-page-info-block-price">
           <h2>price:{{product.price}} $</h2>
+
           <button [routerLink]="['/cart']" class="app-product-page-info-block-price-btn">Add to cart</button>
         </div>
       </div>
 
-
       <div class="app-product-page-info-block-right">
         <div class="app-product-page-info-block-right-tittle">
           <h2>Information:</h2>
+
+          <div>
+            <quill-view-html [content]="product?.info"></quill-view-html>
+          </div>
         </div>
       </div>
     </div>
