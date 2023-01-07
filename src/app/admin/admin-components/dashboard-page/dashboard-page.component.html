@@ -8,7 +8,7 @@
           <div>{{idx + 1}}.</div>
           <div class="type">{{product.tittle}}</div>
           <div class="price">{{product.price}} $</div>
-          <div class="date">{{product.date}}</div>
+          <div class="date">{{product.date | date: 'fullDate'}}</div>
         </div>
 
         <div class="app-dashboard-page-block-btn">

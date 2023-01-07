@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { QuillModule } from 'ngx-quill'
+import {QuillModule} from 'ngx-quill'
 
 import {AdminLayoutComponent} from './admin-components/admin-layout/admin-layout.component';
 import {LoginPageComponent} from "./admin-components/login-page/login-page.component";
@@ -38,7 +38,7 @@ import {AuthGuard} from "../auth.guard";
           {path: 'product/:id/edit', component: EditPageComponent, canActivate: [AuthGuard]},
         ]
       }
-    ])
+    ]),
   ],
   exports: [RouterModule],
 })

@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {QuillModule} from "ngx-quill";
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {AppRoutingModule} from "./app.routing.module";
 import {MainLayoutComponent} from "./app-components/main-layout/main-layout.component";
 import {MainPageComponent} from "./app-components/main-page/main-page.component";
@@ -20,7 +20,7 @@ import {ProductComponent} from "./app-components/product/product.component";
     MainPageComponent,
     ProductPageComponent,
     CartPageComponent,
-    ProductComponent
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,4 +37,5 @@ import {ProductComponent} from "./app-components/product/product.component";
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
