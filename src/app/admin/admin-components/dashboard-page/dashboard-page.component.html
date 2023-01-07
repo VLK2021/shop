@@ -1,8 +1,12 @@
 <div *ngIf="products; else loading" class="maine">
   <h2 class="text-center">Dashboard of products</h2>
 
+  <div class="search">
+    <input type="text" placeholder="search a product..." [(ngModel)]="productName">
+  </div>
+
   <div class="app-dashboard-page">
-    <div *ngFor="let product of products; let idx = index">
+    <div *ngFor="let product of products | search: productName; let idx = index">
       <div class="app-dashboard-page-block">
         <div class="app-dashboard-page-block-info">
           <div>{{idx + 1}}.</div>
@@ -12,7 +16,9 @@
         </div>
 
         <div class="app-dashboard-page-block-btn">
-          <button [routerLink]="['/admin', 'product', product.id, 'edit']" class="app-dashboard-page-block-btn-open">Open</button>
+          <button [routerLink]="['/admin', 'product', product.id, 'edit']" class="app-dashboard-page-block-btn-open">
+            Open
+          </button>
 
           <button class="app-dashboard-page-block-btn-delete" (click)="delete(product.id)">Delete</button>
         </div>

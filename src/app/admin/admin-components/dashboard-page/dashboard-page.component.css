@@ -16,6 +16,20 @@
   margin-bottom: 1rem;
 }
 
+.search{
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.search > input {
+  width: 100%;
+  padding: 0.5rem;
+  color: darkblue;
+  border: 1px solid blue;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
 .app-dashboard-page-block-info {
   width: 85%;
   display: flex;

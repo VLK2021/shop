@@ -11,6 +11,7 @@ import {DashboardPageComponent} from './admin-components/dashboard-page/dashboar
 import {OrdersPageComponent} from './admin-components/orders-page/orders-page.component';
 import {EditPageComponent} from "./admin-components/edit-page/edit-page.component";
 import {AuthGuard} from "../auth.guard";
+import {SearchPipe} from "../search.pipe";
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {AuthGuard} from "../auth.guard";
     DashboardPageComponent,
     OrdersPageComponent,
     EditPageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    SearchPipe
   ],
   imports: [
     CommonModule,
