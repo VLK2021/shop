@@ -1,1 +1,32 @@
-<p>orders-page works!</p>
+<div *ngIf="orders; else loading" class="maine">
+  <h2 class="text-center">Orders:</h2>
+
+  <div class="app-dashboard-page">
+    <div *ngFor="let order of orders">
+      <div class="app-dashboard-page-block">
+        <div class="app-dashboard-page-block-info">
+          <div>{{order.date | date: 'medium'}}</div>
+          <div>{{order.phone}}</div>
+          <div>{{order.name}}</div>
+          <div>{{order.address}}</div>
+          <div *ngFor="let product of order.orders">
+            {{product.tittle}}
+          </div>
+          <div>
+            <div>{{order.price}} $</div>
+            <div>{{order.payment}}</div>
+          </div>
+        </div>
+
+        <div class="app-dashboard-page-block-btn">
+          <button class="app-dashboard-page-block-btn-delete" (click)="delete(order.id)">Completed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p class="text-center">No orders...</p>
+</ng-template>
+

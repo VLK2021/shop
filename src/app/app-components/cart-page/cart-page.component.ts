@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 import {ProductService} from "../../product.service";
 import {IProduct} from "../../interfaces/IProduct";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {OrderService} from "../../order.service";
 
 
@@ -56,8 +56,6 @@ export class CartPageComponent implements OnInit {
       price: this.totalPrice,
       date: new Date()
     };
-
-    console.log(order);
 
     this.orderService.create(order).subscribe(res => {
       this.form.reset()
