@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import {ProductService} from "../../product.service";
+import {IProduct} from "../../interfaces/IProduct";
 
 
 @Component({
@@ -10,12 +11,18 @@ import {ProductService} from "../../product.service";
 })
 
 export class CartPageComponent implements OnInit {
+  cartProducts: IProduct[];
+  totalPrice = 0;
 
-  constructor(private productService:ProductService) {
+  constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
-    console.log(this.productService.cartProducts);
+    this.cartProducts = this.productService.cartProducts;
+    for (let i = 0; i < this.cartProducts.length; i++) {
+      // @ts-ignore
+      this.totalPrice += +this.cartProducts[i].price
+    }
   }
 
 }

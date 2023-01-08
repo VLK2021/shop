@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
 import {ProductService} from "../../product.service";
+import {IProduct} from "../../interfaces/IProduct";
 
 
 @Component({
@@ -22,5 +23,9 @@ export class ProductPageComponent implements OnInit {
     this.activatedRoute.params.subscribe(({id}) => {
       this.productService.getById(id).subscribe(value => this.product = value)
     })
+  }
+
+  addProduct(product: IProduct) {
+    this.productService.addProduct(product);
   }
 }

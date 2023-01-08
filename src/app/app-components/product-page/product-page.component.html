@@ -15,7 +15,7 @@
         <div class="app-product-page-info-block-price">
           <h2>price:{{product.price}} $</h2>
 
-          <button [routerLink]="['/cart']" class="app-product-page-info-block-price-btn">Add to cart</button>
+          <button (click)="addProduct(product)" [routerLink]="['/cart']" class="app-product-page-info-block-price-btn">Add to cart</button>
         </div>
       </div>
 
