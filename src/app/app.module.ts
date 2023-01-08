@@ -11,6 +11,7 @@ import {ProductPageComponent} from "./app-components/product-page/product-page.c
 import {CartPageComponent} from "./app-components/cart-page/cart-page.component";
 import {AuthInterceptor} from "./auth.interseptor";
 import {ProductComponent} from "./app-components/product/product.component";
+import {SortingPipe} from "./sorting.pipe";
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {ProductComponent} from "./app-components/product/product.component";
     ProductPageComponent,
     CartPageComponent,
     ProductComponent,
+    SortingPipe
   ],
   imports: [
     BrowserModule,

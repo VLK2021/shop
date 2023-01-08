@@ -12,7 +12,7 @@ import {ProductService} from "../../product.service";
 export class MainPageComponent implements OnInit {
   products: any
 
-  constructor(private productService: ProductService) { }
+  constructor(public productService: ProductService) { }
 
   ngOnInit(): void {
     this.productService.getAll().subscribe(value => this.products = value)

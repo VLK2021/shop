@@ -11,6 +11,7 @@ import {IProduct} from "./interfaces/IProduct";
 })
 
 export class ProductService {
+  type = 'Phone';
 
   constructor(private http: HttpClient) {
   }
@@ -55,6 +56,10 @@ export class ProductService {
 
   update(product:IProduct) {
     return this.http.patch(`${environment.fbDbUrl}/products/${product.id}.json`, product)
+  }
+
+  setType(type: any) {
+    this.type = type;
   }
 
 }
