@@ -12,6 +12,7 @@ import {CartPageComponent} from "./app-components/cart-page/cart-page.component"
 import {AuthInterceptor} from "./auth.interseptor";
 import {ProductComponent} from "./app-components/product/product.component";
 import {SortingPipe} from "./sorting.pipe";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -28,6 +29,8 @@ import {SortingPipe} from "./sorting.pipe";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     QuillModule.forRoot()
   ],
   providers: [

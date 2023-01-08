@@ -1,6 +1,56 @@
+.app-cart-page-tittle {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+}
+
+
 .app-cart-page {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.2rem 0.5rem;
+}
+
+.app-cart-page-type {
+  text-align: start;
+  width: 20%;
+}
+
+.app-cart-page-tittle-tittle {
+  text-align: start;
+  width: 30%;
+}
+
+.app-cart-page-btn {
+  width: 25%;
+  text-align: center;
+}
+
+.app-cart-page-btn > button{
+  width: 6rem;
+  background: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.app-cart-page-price {
+  width: 25%;
+  text-align: end;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.app-cart-page-totalPrice {
+  width: 100%;
+  text-align: end;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: black;
+  margin-top: 1rem;
 }

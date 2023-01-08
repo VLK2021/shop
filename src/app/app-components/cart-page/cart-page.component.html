@@ -1,15 +1,68 @@
 <div *ngIf="cartProducts.length > 0; else empty" class="container">
-  <h2 class="text-center">Your order:</h2>
+  <h2 class="text-center app-cart-page-tittle">Your order:</h2>
+
   <div *ngFor="let cartProduct of cartProducts; let i = index" class="app-cart-page">
-    <div>{{cartProduct.type}}</div>
-    <div>{{cartProduct.tittle}}</div>
-    <div>
-      <button>Delete</button>
+    <div class="app-cart-page-type">{{cartProduct.type}}</div>
+    <div class="app-cart-page-tittle-tittle">{{cartProduct.tittle}}</div>
+    <div class="app-cart-page-btn">
+      <button (click)="delete(cartProduct)">Delete</button>
     </div>
-    <div>{{cartProduct.price}}</div>
+    <div class="app-cart-page-price">{{cartProduct.price}} $</div>
   </div>
+
   <hr>
-  <div>{{totalPrice}}</div>
+  <div class="app-cart-page-totalPrice">Total: {{totalPrice}} $</div>
+
+
+  <h2 class="text-center">Delivery</h2>
+
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="control-block">
+      <div>
+        <label for="name">Name:</label>
+      </div>
+      <input id="name" type="name" formControlName="name">
+      <div *ngIf="form.controls['name'].touched  && form.controls['name'].invalid" class="inpPass-validation">
+        <small *ngIf="!form.controls['name'].value">Enter your name</small>
+      </div>
+    </div>
+
+    <div class="control-block">
+      <div>
+        <label for="phone">Phone number:</label>
+      </div>
+      <input id="phone" type="phone" formControlName="phone">
+      <div *ngIf="form.controls['phone'].touched  && form.controls['phone'].invalid" class="inpPass-validation">
+        <small *ngIf="!form.controls['phone'].value">Enter your phone number</small>
+      </div>
+    </div>
+
+    <div class="control-block">
+      <div>
+        <label for="address">Addres:</label>
+      </div>
+      <input id="address" type="address" formControlName="address">
+      <div *ngIf="form.controls['address'].touched  && form.controls['address'].invalid" class="inpPass-validation">
+        <small *ngIf="!form.controls['address'].value">Enter your address</small>
+      </div>
+    </div>
+
+    <div class="control-block">
+      <div>
+        <label for="payment">Payment method:</label>
+      </div>
+      <select id="payment" formControlName="payment">
+        <option value="Cash">Cash</option>
+        <option value="Card">Card</option>
+      </select>
+    </div>
+
+    <div class="btn">
+      <button type="submit" [disabled]="form.invalid || submitted" class="btn-form">Add</button>
+    </div>
+  </form>
+
 </div>
 
 
