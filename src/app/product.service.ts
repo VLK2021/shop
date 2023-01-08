@@ -12,6 +12,7 @@ import {IProduct} from "./interfaces/IProduct";
 
 export class ProductService {
   type = 'Phone';
+  cartProducts:IProduct[] = [];
 
   constructor(private http: HttpClient) {
   }
@@ -60,6 +61,10 @@ export class ProductService {
 
   setType(type: any) {
     this.type = type;
+  }
+
+  addProduct(product:IProduct) {
+    this.cartProducts.push(product);
   }
 
 }
