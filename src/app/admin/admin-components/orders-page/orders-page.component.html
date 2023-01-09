@@ -10,7 +10,9 @@
           <div>{{order.name}}</div>
           <div>{{order.address}}</div>
           <div *ngFor="let product of order.orders">
-            {{product.tittle}}
+            <div>
+              {{product.tittle}}
+            </div>
           </div>
           <div>
             <div>{{order.price}} $</div>

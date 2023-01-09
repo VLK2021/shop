@@ -12,7 +12,7 @@ import {IProduct} from "./interfaces/IProduct";
 
 export class ProductService {
   type = 'Phone';
-  cartProducts:IProduct[] = [];
+  cartProducts: IProduct[] = [];
 
   constructor(private http: HttpClient) {
   }
@@ -55,7 +55,7 @@ export class ProductService {
     return this.http.delete(`${environment.fbDbUrl}/products/${id}.json`)
   }
 
-  update(product:IProduct) {
+  update(product: IProduct) {
     return this.http.patch(`${environment.fbDbUrl}/products/${product.id}.json`, product)
   }
 
@@ -63,7 +63,7 @@ export class ProductService {
     this.type = type;
   }
 
-  addProduct(product:IProduct) {
+  addProduct(product: IProduct) {
     this.cartProducts.push(product);
   }
 

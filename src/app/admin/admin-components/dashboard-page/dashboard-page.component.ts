@@ -22,7 +22,6 @@ export class DashboardPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.pSubscription = this.productService.getAll().subscribe(value => {
-      console.log(value)
       this.products = value;
     })
   }

@@ -1,0 +1,27 @@
+.maine{
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.maine > h2{
+  width: 100%;
+  margin: 1rem 0 2rem 0;
+  color: black;
+  font-weight: bold;
+}
+
+.app-dashboard-page, .app-dashboard-page-block{
+  width: 100%;
+}
+
+.app-dashboard-page-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-dashboard-page-block-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

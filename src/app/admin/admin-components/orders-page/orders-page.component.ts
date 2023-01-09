@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Subscription} from "rxjs";
 
 import {OrderService} from "../../../order.service";
+import {IOrder} from "../../../interfaces/IOrder";
 
 
 @Component({
@@ -11,11 +12,12 @@ import {OrderService} from "../../../order.service";
 })
 
 export class OrdersPageComponent implements OnInit {
-  orders: any;
+  orders: IOrder[];
   pSub: Subscription;
   rSub: Subscription;
 
-  constructor(private orderService: OrderService) { }
+  constructor(private orderService: OrderService) {
+  }
 
   ngOnInit(): void {
     this.orderService.getAll().subscribe(ord => {
@@ -24,7 +26,7 @@ export class OrdersPageComponent implements OnInit {
   };
 
   ngOnDestroy() {
-    if (this.pSub){
+    if (this.pSub) {
       this.pSub.unsubscribe();
     }
 
@@ -33,16 +35,14 @@ export class OrdersPageComponent implements OnInit {
     }
   };
 
-  remove(id:any) {
-    this.rSub = this.orderService.remove(id).subscribe(()=>{
-      // @ts-ignore
+  remove(id: string) {
+    this.rSub = this.orderService.remove(id).subscribe(() => {
       this.orders = this.orders.filter(ord => ord.id !== id);
     })
   }
 
   delete(id: any) {
     this.rSub = this.orderService.remove(id).subscribe(() => {
-      // @ts-ignore
       this.orders = this.orders.filter(prod => prod.id != id);
     })
   }

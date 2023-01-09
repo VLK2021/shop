@@ -2,8 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 import {ProductService} from "../../product.service";
-import {IProduct} from "../../interfaces/IProduct";
 import {OrderService} from "../../order.service";
+import {ICartProducts} from "../../interfaces/ICartProducts";
 
 
 @Component({
@@ -13,7 +13,7 @@ import {OrderService} from "../../order.service";
 })
 
 export class CartPageComponent implements OnInit {
-  cartProducts: IProduct[];
+  cartProducts: ICartProducts[];
   totalPrice = 0;
   form: FormGroup;
   submitted = false;
