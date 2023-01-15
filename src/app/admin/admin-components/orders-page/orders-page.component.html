@@ -5,18 +5,18 @@
     <div *ngFor="let order of orders">
       <div class="app-dashboard-page-block">
         <div class="app-dashboard-page-block-info">
-          <div>{{order.date | date: 'medium'}}</div>
-          <div>{{order.phone}}</div>
-          <div>{{order.name}}</div>
-          <div>{{order.address}}</div>
+          <div class="app-dashboard-page-date">{{order.date | date: 'medium'}}</div>
+          <div class="app-dashboard-page-phone">{{order.phone}}</div>
+          <div class="app-dashboard-page-name">{{order.name}}</div>
+          <div class="app-dashboard-page-address">{{order.address}}</div>
           <div *ngFor="let product of order.orders">
-            <div>
+            <div class="app-dashboard-page-tittle">
               {{product.tittle}}
             </div>
           </div>
           <div>
-            <div>{{order.price}} $</div>
-            <div>{{order.payment}}</div>
+            <div class="app-dashboard-page-price">{{order.price}} $</div>
+            <div class="app-dashboard-page-payment">{{order.payment}}</div>
           </div>
         </div>
 
