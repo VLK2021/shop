@@ -34,40 +34,51 @@
 
 .app-orders-page-date {
   width: 15%;
+  font-weight: bold;
 }
 
 .app-orders-page-phone {
   width: 15%;
+  font-weight: bold;
 }
 
 .app-orders-page-name {
   width: 10%;
+  font-weight: bold;
 }
 
 .app-orders-page-address {
   width: 15%;
+  font-weight: bold;
 }
 
 .app-orders-page-tittle {
   width: 100%;
+  font-weight: bold;
 }
 
 .app-orders-page-price-pp {
   width: 25%;
+  font-weight: bold;
 }
 
 
 .app-orders-page-tittle-maine {
   width: 20%;
+  font-weight: bold;
 }
 
 .app-orders-page-block-btn-delete {
-  width: 5rem;
+  width: 6rem;
   background: red;
   color: white;
   border-radius: 0.5rem;
-  padding: 0.3rem;
+  padding: 0.8rem;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
 }
 
 .app-orders-page-block-btn {
