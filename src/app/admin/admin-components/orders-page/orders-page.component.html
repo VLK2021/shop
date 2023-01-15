@@ -1,27 +1,29 @@
 <div *ngIf="orders; else loading" class="maine">
   <h2 class="text-center">Orders:</h2>
 
-  <div class="app-dashboard-page">
+  <div class="app-orders-page">
     <div *ngFor="let order of orders">
-      <div class="app-dashboard-page-block">
-        <div class="app-dashboard-page-block-info">
-          <div class="app-dashboard-page-date">{{order.date | date: 'medium'}}</div>
-          <div class="app-dashboard-page-phone">{{order.phone}}</div>
-          <div class="app-dashboard-page-name">{{order.name}}</div>
-          <div class="app-dashboard-page-address">{{order.address}}</div>
-          <div *ngFor="let product of order.orders">
-            <div class="app-dashboard-page-tittle">
-              {{product.tittle}}
+      <div class="app-orders-page-block">
+        <div class="app-orders-page-block-info">
+          <div class="app-orders-page-date padding-block text-center">{{order.date | date: 'medium'}}</div>
+          <div class="app-orders-page-phone padding-block text-center">{{order.phone}}</div>
+          <div class="app-orders-page-name padding-block text-center">{{order.name}}</div>
+          <div class="app-orders-page-address padding-block text-center">{{order.address}}</div>
+          <div  class="app-orders-page-tittle-maine">
+            <div *ngFor="let product of order.orders">
+              <div class="app-orders-page-tittle padding-block text-center">
+                {{product.tittle}}
+              </div>
             </div>
           </div>
-          <div>
-            <div class="app-dashboard-page-price">{{order.price}} $</div>
-            <div class="app-dashboard-page-payment">{{order.payment}}</div>
+          <div class="app-orders-page-price-pp">
+            <div class="app-orders-page-price padding-block text-center">{{order.price}} $</div>
+            <div class="app-orders-page-payment padding-block text-center">{{order.payment}}</div>
           </div>
         </div>
 
-        <div class="app-dashboard-page-block-btn">
-          <button class="app-dashboard-page-block-btn-delete" (click)="delete(order.id)">Completed</button>
+        <div class="app-orders-page-block-btn">
+          <button class="app-orders-page-block-btn-delete" (click)="delete(order.id)">Completed</button>
         </div>
       </div>
     </div>

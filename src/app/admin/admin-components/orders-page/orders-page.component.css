@@ -10,19 +10,66 @@
   font-weight: bold;
 }
 
-.app-dashboard-page, .app-dashboard-page-block{
+.app-orders-page, .app-orders-page-block{
   width: 100%;
 }
 
-.app-dashboard-page-block{
+.app-orders-page-block{
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
 }
 
-.app-dashboard-page-block-info{
+.app-orders-page-block-info{
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.padding-block {
+  padding: 0.2rem;
+}
+
+.app-orders-page-date {
+  width: 15%;
+}
+
+.app-orders-page-phone {
+  width: 15%;
+}
+
+.app-orders-page-name {
+  width: 10%;
+}
+
+.app-orders-page-address {
+  width: 15%;
+}
+
+.app-orders-page-tittle {
+  width: 100%;
+}
+
+.app-orders-page-price-pp {
+  width: 25%;
+}
+
+
+.app-orders-page-tittle-maine {
+  width: 20%;
+}
+
+.app-orders-page-block-btn-delete {
+  width: 5rem;
+  background: red;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  font-weight: bold;
+}
+
+.app-orders-page-block-btn {
+  text-align: center;
+}
